@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+
+
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/custom/dashboard.js"></script>
+
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            <!--background:  url(../images/sample9.jpg) no-repeat center top;-->
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+        }
+        header h1{
+            color : white;
+        }
+        header h2 {
+            color : white;
+        }
+    </style>
+</head>
+<body ng-app="dashboard" >
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid" >
+<!--        <div class="container-fluid" style="background-color:#337ab7">-->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="color:#ffffff">Tripster</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <!--<ul class="nav navbar-nav">
+                 <li style="color:#ffffff"><a href="#"><span class="glyphicon glyphicon-home"></span> Welcome Guest</a></li>
+
+                 <li class="active"><a href="#">Home</a></li>
+
+                 <li><a href="#">Page 2</a></li>
+
+            </ul>
+            -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:#ffffff"><span class="glyphicon glyphicon-wrench"></span>Settings <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-trash"></span>Delete Account</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" style="color:#ffffff"><span class="glyphicon glyphicon-log-out" ></span> Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="col-md-2">
+
+
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Welcome Guest</a></li>
+                <!--<li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Submenu 1-1</a></li>
+                        <li><a href="#">Submenu 1-2</a></li>
+                        <li><a href="#">Submenu 1-3</a></li>
+                    </ul>
+                </li>-->
+                <li><img src="../images/defaultUserIcon.jpg" class="image"   ></li>
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">My Invites</a></li>
+                <li><a href="#">My Calendar</a></li>
+                <li><a href="#">My ToDos</a></li>
+            </ul>
+
+    </div>
+
+
+    <div class="col-md-8">
+            <!--<div class="jumbotron">
+                <h1>Welcome to Tripster!</h1>
+            </div>-->
+            <!--<div class="page-header">
+                <h1>Welcome to Tripster !</h1>
+            </div>
+-->
+        <div style="background:transparent !important" class="page-header">
+            <h2>Updates</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <p><a href="#">Invitations </a> </p></div>
+                <div class="col-md-2">
+                    <p>4  </p></div></div>
+                <div class="row">
+                <div class="col-md-3">
+                    <p><a href="#">Pictures Shared with you </a> </p></div>
+                <div class="col-md-2">
+                    <p>10  </p></div>
+
+                 </div>
+            </div>
+
+            <div>
+                <section class="tab" ng-controller="TabController as tabCtrl">
+                    <ul class="nav nav-pills">
+                        <li ng-class="{ active: tabCtrl.isSet(1) }">
+                            <a href ng-click="tabCtrl.setTab(1)">My Trips</a></li>
+                        <li ng-class="{ active: tabCtrl.isSet(2) }">
+                            <a href ng-click="tabCtrl.setTab(2)">My Groups</a></li>
+                        <li ng-class="{ active: tabCtrl.isSet(3) }">
+                            <a href ng-click="tabCtrl.setTab(3)">My Activity</a></li>
+                    </ul>
+                    {{tab}}
+
+                    <div ng-show="tabCtrl.isSet(1)">
+
+                        <br/>
+                        <blockquote> Sample Block Quote Placeholder</blockquote>
+
+                        India never invaded any country in her last 100000 years of history.
+
+                        When many cultures were only nomadic forest dwellers over 5000 years ago, Indians established Harappan culture in Sindhu Valley (Indus Valley Civilization)
+
+                        The name ‘India’ is derived from the River Indus, the valleys around which were the home of the early settlers. The Aryan worshippers referred to the river Indus as the Sindhu.
+
+                        The Persian invaders converted it into Hindu. The name ‘Hindustan’ combines Sindhu and Hindu and thus refers to the land of the Hindus.
+                        Chess was invented in India.
+
+                        Algebra, Trigonometry and Calculus are studies, which originated in India.
+
+                        The ‘Place Value System’ and the ‘Decimal System’ were developed in India in 100 B.C.
+
+                        The World’s First Granite Temple is the Brihadeswara Temple at Tanjavur, Tamil Nadu. The shikhara of the temple is made from a single 80-tonne piece of granite. This magnificent temple was built in just five years, (between 1004 AD and 1009 AD) during the reign of Rajaraja Chola.
+
+                        India is the largest democracy in the world, the 6th largest Country in the world, and one of the most ancient civilizations.
+
+                        The game of Snakes & Ladders was created by the 13th century poet saint Gyandev. It was originally called ‘Mokshapat’. The ladders in the game represented virtues and the snakes indicated vices. The game was played with cowrie shells and dices. In time, the game underwent several modifications, but its meaning remained the same, i.e. good deeds take people to heaven and evil to a cycle of re-births.
+
+                        The world’s highest cricket ground is in Chail, Himachal Pradesh. Built in 1893 after leveling a hilltop, this cricket pitch is 2444 meters above sea level.
+
+                        India has the largest number of Post Offices in the world.
+
+                        The largest employer in the world is the Indian Railways, employing over a million people.
+
+
+                    </div>
+                    <div ng-show="tabCtrl.isSet(2)">
+
+                        <br/>
+                        <blockquote>Placeholder</blockquote>
+
+                        The world’s first university was established in Takshila in 700 BC. More than 10,500 students from all over the world studied more than 60 subjects. The University of Nalanda built in the 4th century was one of the greatest achievements of ancient India in the field of education.
+
+                        Ayurveda is the earliest school of medicine known to mankind. The Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago.
+
+                        India was one of the richest countries till the time of British rule in the early 17th Century. Christopher Columbus, attracted by India’s wealth, had come looking for a sea route to India when he discovered America by mistake.
+
+                        The Art of Navigation & Navigating was born in the river Sindh over 6000 years ago. The very word Navigation is derived from the Sanskrit word ‘NAVGATIH’. The word navy is also derived from the Sanskrit word ‘Nou’.
+
+                        Bhaskaracharya rightly calculated the time taken by the earth to orbit the Sun hundreds of years before the astronomer Smart. According to his calculation, the time taken by the Earth to orbit the Sun was 365.258756484 days.
+
+
+                        The value of “pi” was first calculated by the Indian Mathematician Budhayana, and he explained the concept of what is known as the Pythagorean Theorem. He discovered this in the 6th century, long before the European mathematicians.
+
+
+                        Algebra, Trigonometry and Calculus also originated in India.Quadratic Equations were used by Sridharacharya in the 11th century. The largest numbers the Greeks and the Romans used were 106 whereas Hindus used numbers as big as 1053 (i.e. 10 to the power of 53) with specific names as early as 5000 B.C.during the Vedic period.Even today, the largest used number is Terra: 1012(10 to the power of 12).
+
+
+                        Until 1896, India was the only source of diamonds in the world. (Source: Gemological Institute of America).
+
+
+                        The Baily Bridge is the highest bridge in the world. It is located in the Ladakh valley between the Dras and Suru rivers in the Himalayan mountains. It was built by the Indian Army in August 1982.
+
+
+                        Sushruta is regarded as the Father of Surgery. Over2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries.
+
+
+                        Usage of anaesthesia was well known in ancient Indian medicine. Detailed knowledge of anatomy, embryology, digestion, metabolism,physiology, etiology, genetics and immunity is also found in many ancient Indian texts.
+
+
+                        India exports software to 90 countries.
+
+
+                    </div>
+                    <div ng-show="tabCtrl.isSet(3)">
+
+
+                        <p><br/>
+                            The four religions born in India – Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world’s population.
+
+                        Jainism and Buddhism were founded in India in 600 B.C. and 500 B.C. respectively.
+
+                        Islam is India’s and the world’s second largest religion.
+
+                        There are 300,000 active mosques in India, more than in any other country, including the Muslim world.
+
+
+                        The oldest European church and synagogue in India are in the city of Cochin. They were built in 1503 and 1568 respectively.
+
+
+                        Jews and Christians have lived continuously in India since 200 B.C. and 52 A.D. respectively
+
+
+                        The largest religious building in the world is Angkor Wat, a Hindu Temple in Cambodia built at the end of the 11th century.
+
+
+                        The Vishnu Temple in the city of Tirupathi built in the 10th century, is the world’s largest religious pilgrimage destination. Larger than either Rome or Mecca, an average of 30,000 visitors donate $6 million (US) to the temple everyday.
+
+
+                        Sikhism originated in the Holy city of Amritsar in Punjab. Famous for housing the Golden Temple, the city was founded in 1577.
+
+
+                        Varanasi, also known as Benaras, was called “the Ancient City” when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today.
+
+
+                        India provides safety for more than 300,000 refugees originally from Sri Lanka, Tibet, Bhutan, Afghanistan and Bangladesh, who escaped to flee religious and political persecution.
+
+
+                        His Holiness, the Dalai Lama, the exiled spiritual leader of Tibetan Buddhists, runs his government in exile from Dharmashala in northern India.
+
+
+                        Martial Arts were first created in India, and later spread to Asia by Buddhist missionaries.
+
+
+                        Yoga has its origins in India and has existed for over 5,000 years.</p>
+
+                    </div>
+                </section>
+            </div>
+
+    </div>
+
+    <div class="col-md-2">
+
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Quick Links</a></li>
+               <!-- <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Submenu 1-1</a></li>
+                        <li><a href="#">Submenu 1-2</a></li>
+                        <li><a href="#">Submenu 1-3</a></li>
+                    </ul>
+                </li>-->
+                <li><a href="#">All Media</a></li>
+                <li><a href="#">My Collection</a></li>
+                <li><a href="#">My Videos</a></li>
+                <li><a href="#">My Tripster</a></li>
+            </ul>
+        </div>
+
+
+</div>
+
+<div class="navbar-footer">
+    <span>
+        <a href="#" target="_blank">About Tripster</a> |
+        <a href="#" target="_blank">Contact Us</a> |
+        Copyright © 2015 </span>
+
+</div>
+
+</body>
+</html>

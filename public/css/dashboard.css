@@ -1,0 +1,45 @@
+header {
+    position:relative;
+    style:"color: #ffffff";
+}
+
+/*Background of Navigation Bar */
+.navbar-default {
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #ffffff;
+    background-color: dodgerblue;
+}
+
+/* Footer Nav Bar */
+.navbar-footer{
+    height: 2em;
+    width: 100%;
+    background: #337ab7;
+    color: #ffffff;
+    position: fixed;
+    top: 100%;
+    margin-top: -2em;
+    text-align: center;
+}
+
+.navbar-footer a{
+    color:#ffffff;
+}
+/*
+.navbar-default .navbar-nav > li > a {
+    color: #ffff00;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: antiquewhite;
+    color: antiquewhite;
+}
+
+
+
+.navbar-default .navbar-brand {
+    color: antiquewhite;
+}*/

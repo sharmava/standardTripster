@@ -1,0 +1,53 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/tripster.css" type="text/css">
+    <title>Tripster</title>
+    <script type= "text/javascript" src="./js/angular.js"></script>
+    <script  type= "text/javascript" src="./js/custom/login.js"></script>
+</head>
+<body>
+
+<div id="background" ng-app="loginPage" ng-controller="loginCheck">
+    <header>
+        <h1 id="trip" align ="center" >Tripster</h1>
+    </header>
+
+    <div align = "center" id="login_form">
+        <section class="loginClass">
+            <form  name="loginForm" action="index_submit" method="get" accept-charset="utf-8" ng-submit ="validateLogIn()" >
+                <h2 id="log" font-family="Copperplate" font-weight="bold">Take Me In</h2>
+                <p>Please Enter your User name and Password</p>
+                <ul id = "login_info">
+                    <li><label for="usermail">Email</label>
+                        <input id = "ipbox" type="email" name="usermail" placeholder="yourname@email.com" required ng-model="Email" class="ng-pristine ng-valid"></li>
+                    <li><label for="password">Password</label>
+                        <input  id = "ipbox2"type="password" name="password" placeholder="password" required ng-model="Password" class="ng-pristine ng-valid"></li>
+                </ul>
+                <ul id = "buttons">
+                    <li><input id = "rem_me" type="checkbox" name="Remember_me" value="Remember me"> Remember me</br></li>
+                    <li><input id = "submit_button"    type="submit" value="Login" ></li>
+
+                    <!--<li><input id = "submit_button"  type="submit" value="Login" ng-submit="login(username, password)" ></li>-->
+
+                </ul>
+
+
+                <p>Don't have an account?<p>
+                <a href="#create_new" ng-click="registernewUser()">Create new Account</a>
+                <a href="#Forgot" ng-click ="forgotdetails()">Forgot your User Name or Password</a>
+                <p>For test purpose</p>
+                <p>You wrote: {{ email }}</p>
+                <p>You wrote: {{ password }}</p>
+
+            </form>
+        </section>
+        <!-- <p>Input something in the input box:</p>
+        <p>Name: <input type="text" ng-model="name"></p>
+        <p ng-bind="name"></p> -->
+    </div>
+</div>
+
+
+</body>
+</html>

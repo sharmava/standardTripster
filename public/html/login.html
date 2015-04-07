@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <title>Tripster</title>
+        <script type= "text/javascript" src="./js/angular.js"></script>
+        <script  type= "text/javascript" src="./js/custom/login.js"></script>
+        <style>
+            body {
+                background: #7f9b4e url(/images/sample10.jpg) no-repeat center top;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                background-size: cover;
+            }
+             header h1{
+                 color : white;
+             }
+             header h2 {
+               color : white;
+            }
+        </style>
+    </head>
+    <body ng-app="loginPage" >
+        <div class="container">
+            <header>
+                <h1 style="color: #ffffff"><strong>Welcome to Tripster</strong>!</h1>
+                <h4 style="color: #d43f3a">Ready for another <strong>Journey</strong> ?</h4>
+            </header>
+
+            <h3>
+                <span style="color: #d43f3a; font-weight: bold"><strong>Today's Quote</strong></span> <br>
+
+                <span style="color: forestgreen; font-weight: bold; font-style: italic;">“Certainly, travel is more than the seeing of sights; it is a change that goes on, deep and permanent, in the ideas of living.” </span>><br>– Miriam Beard
+
+            </h3>
+
+            <section class="main" ng-controller="loginCheck">
+                <form class="form-4" style="float:right; background: #0273dd " name="loginForm" action="index_submit"
+                      method="get" accept-charset="utf-8">
+                    <h1>Login or Register</h1>
+                    <p>
+                        <label for="login">Username or email</label>
+                        <input id = "ipbox1" type="text" name="usermail" placeholder="username@email.com"
+                               required ng-model="Email" class="ng-pristine ng-valid">
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                       <input  id = "ipbox2"type="password" name="password" placeholder="password"
+                               required ng-model="Password" class="ng-pristine ng-valid">
+                    </p>
+
+                    <p>
+                        <input type="submit" name="submit" value="Continue" ng-click="validateLogIn()">
+                    </p><br>
+                    <p>
+                    <span>Don't have an account?</span><br>
+                    <a href="#create_new" style="color: #ffffff" ng-click="registernewUser()">Create new Account</a> <br>
+                    <a href="#Forgot" style="color: #ffffff" ng-click ="forgotdetails()">Forgot your User Name or Password</a>
+                    </p>
+                </form>​
+
+
+            </section>
+            
+        </div>
+    </body>
+</html>

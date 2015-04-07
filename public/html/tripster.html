@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/tripster.css" type="text/css">
+<title>Tripster</title>
+<script src= "/js/angular.js"></script>
+</head>
+
+<body >
+<div id="background">
+<header>
+ <h1 id="trip" align ="center" >Tripster</h1>
+  </header>
+
+  <div align = "center" ng-app="" id="login_form">
+	<section class="loginclss">  
+	<form  name="login" action="index_submit" method="get" accept-charset="utf-8">  
+		<h2 id="log" font-family="Copperplate" font-weight="bold">Tripster</h2>
+		
+		<ul id = "login_info">  
+			<li><label id="usermail">Username </label>
+			<input id = "ipbox" type="email" name="usermail" placeholder="  yourname@email.com" required></li>  
+			<li><label id="password">Password </label>
+			<input  id = "ipbox2"type="password" name="password" placeholder="  password" required></li>  
+		</ul>
+		<ul id = "buttons">
+			<li><input id = "rem_me" type="checkbox" name="Remember_me" value="Remember me"> Remember me</br></li>
+			<li><input id = "submit_button" type="submit" value="Login"></li>
+		</ul> 
+		
+		
+		<a href="#create_new">Sign Up</a> | 
+		<a href="#Forgot">Forgot User Name </a> |
+		<a href="#Forgot">Forgot Password</a>
+		
+		<br/>
+		<br/>
+		
+	</form>  
+	</section>
+<!-- <p>Input something in the input box:</p>
+<p>Name: <input type="text" ng-model="name"></p>
+<p ng-bind="name"></p> -->
+</div>
+</div>
+</body>
+</html>
+
+
+
+
